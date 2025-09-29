@@ -1,5 +1,6 @@
-/*package esprit.tn.spring1.entities;
+package esprit.tn.spring1.entities;
 
+import esprit.tn.spring1.enums.TypeComposant;
 import jakarta.persistence.*;
 
 @Entity
@@ -69,9 +70,9 @@ public class DetailComposant {
                 ", typeComposant=" + typeComposant +
                 '}';
     }
-}*/
+}
 
-package esprit.tn.spring1.entities;
+/* FIRST VISION package esprit.tn.spring1.entities;
 
 import jakarta.persistence.*;
 
@@ -118,4 +119,4 @@ public class DetailComposant {
                 ", tmc=" + tmc +
                 '}';
     }
-}
+}*/

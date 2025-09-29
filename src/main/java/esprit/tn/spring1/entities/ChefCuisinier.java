@@ -1,5 +1,6 @@
-/*package esprit.tn.spring1.entities;
+package esprit.tn.spring1.entities;
 
+import esprit.tn.spring1.enums.TypeChef;
 import jakarta.persistence.*;
 
 @Entity
@@ -66,8 +67,8 @@ public class ChefCuisinier {
                 ", typeChef=" + typeChef +
                 '}';
     }
-}*/
-package esprit.tn.spring1.entities;
+}
+/* FIRST VISION package esprit.tn.spring1.entities;
 
 import jakarta.persistence.*;
 
@@ -125,4 +126,4 @@ public class ChefCuisinier {
                 ", prenom='" + prenom + '\'' +
                 '}';
     }
-}
+}*/

@@ -1,4 +1,4 @@
-/*package esprit.tn.spring1.entities;
+package esprit.tn.spring1.entities;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
@@ -68,9 +68,9 @@ public class ChaineRestaurant {
                 ", dateCreation=" + dateCreation +
                 '}';
     }
-}*/
+}
 
-package esprit.tn.spring1.entities;
+/* FIRST VISION package esprit.tn.spring1.entities;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
@@ -128,4 +128,4 @@ public class ChaineRestaurant {
                 ", dateCreation=" + dateCreation +
                 '}';
     }
-}
+}*/

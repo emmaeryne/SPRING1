@@ -1,5 +1,6 @@
-/*package esprit.tn.spring1.entities;
+package esprit.tn.spring1.entities;
 
+import esprit.tn.spring1.enums.TypeMenu;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -91,8 +92,8 @@ public class Menu {
                 ", prixTotal=" + prixTotal +
                 '}';
     }
-}*/
-package esprit.tn.spring1.entities;
+}
+/* FIRST VISION package esprit.tn.spring1.entities;
 
 import jakarta.persistence.*;
 
@@ -150,4 +151,4 @@ public class Menu {
                 ", prixTotal=" + prixTotal +
                 '}';
     }
-}
+}*/

@@ -1,4 +1,4 @@
-/*package esprit.tn.spring1.entities;
+package esprit.tn.spring1.entities;
 
 import jakarta.persistence.*;
 
@@ -103,9 +103,9 @@ public class Commande {
                 ", note=" + note +
                 '}';
     }
-}*/
+}
 
-package esprit.tn.spring1.entities;
+/* FIRST VISION package esprit.tn.spring1.entities;
 
 import jakarta.persistence.*;
 
@@ -197,4 +197,4 @@ public class Commande {
                 ", note=" + note +
                 '}';
     }
-}
+}*/

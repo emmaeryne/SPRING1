@@ -1,4 +1,4 @@
-package esprit.tn.spring1.entities;
+/* FIRST VISION package esprit.tn.spring1.entities;
 
 import jakarta.persistence.*;
 import java.util.Date;
@@ -59,10 +59,10 @@ public class Client {
                 ", datePremiereVisite=" + datePremiereVisite +
                 '}';
     }
-}
+}*/
 
 
-/*package esprit.tn.spring1.entities;
+package esprit.tn.spring1.entities;
 
 import jakarta.persistence.*;
 import java.util.Date;
@@ -132,4 +132,4 @@ public class Client {
                 ", datePremiereVisite=" + datePremiereVisite +
                 '}';
     }
-}*/
+}
