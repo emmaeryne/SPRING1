@@ -146,12 +146,17 @@ public class Restaurant {
 package esprit.tn.spring1.entities;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
+@Setter
+@Getter
 @Entity
 public class Restaurant {
 
+    // Getters et Setters
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idRestaurant;
@@ -174,47 +179,6 @@ public class Restaurant {
         this.idRestaurant = idRestaurant;
         this.nom = nom;
         this.nbPlacesMax = nbPlacesMax;
-    }
-
-    // Getters et Setters
-    public Long getIdRestaurant() {
-        return idRestaurant;
-    }
-
-    public void setIdRestaurant(Long idRestaurant) {
-        this.idRestaurant = idRestaurant;
-    }
-
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public Long getNbPlacesMax() {
-        return nbPlacesMax;
-    }
-
-    public void setNbPlacesMax(Long nbPlacesMax) {
-        this.nbPlacesMax = nbPlacesMax;
-    }
-
-    public ChaineRestaurant getChaineRestaurant() {
-        return chaineRestaurant;
-    }
-
-    public void setChaineRestaurant(ChaineRestaurant chaineRestaurant) {
-        this.chaineRestaurant = chaineRestaurant;
-    }
-
-    public List<Menu> getMenus() {
-        return menus;
-    }
-
-    public void setMenus(List<Menu> menus) {
-        this.menus = menus;
     }
 
     @Override

@@ -126,10 +126,15 @@ package esprit.tn.spring1.entities;
 
 import esprit.tn.spring1.enums.TypeComposant;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 @Entity
 public class DetailComposant {
 
+    // Getters et Setters
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idDetailComposant;
@@ -149,39 +154,6 @@ public class DetailComposant {
         this.idDetailComposant = idDetailComposant;
         this.tmc = tmc;
         this.typeComposant = typeComposant;
-    }
-
-    // Getters et Setters
-    public Long getIdDetailComposant() {
-        return idDetailComposant;
-    }
-
-    public void setIdDetailComposant(Long idDetailComposant) {
-        this.idDetailComposant = idDetailComposant;
-    }
-
-    public Float getTmc() {
-        return tmc;
-    }
-
-    public void setTmc(Float tmc) {
-        this.tmc = tmc;
-    }
-
-    public TypeComposant getTypeComposant() {
-        return typeComposant;
-    }
-
-    public void setTypeComposant(TypeComposant typeComposant) {
-        this.typeComposant = typeComposant;
-    }
-
-    public Composant getComposant() {
-        return composant;
-    }
-
-    public void setComposant(Composant composant) {
-        this.composant = composant;
     }
 
     @Override

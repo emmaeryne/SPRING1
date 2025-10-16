@@ -61,10 +61,15 @@ package esprit.tn.spring1.entities;
 
 import esprit.tn.spring1.enums.TypeChef;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 @Entity
 public class ChefCuisinier {
 
+    // Getters et Setters
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idChefCuisinier;
@@ -83,39 +88,6 @@ public class ChefCuisinier {
         this.idChefCuisinier = idChefCuisinier;
         this.nom = nom;
         this.prenom = prenom;
-        this.typeChef = typeChef;
-    }
-
-    // Getters et Setters
-    public Long getIdChefCuisinier() {
-        return idChefCuisinier;
-    }
-
-    public void setIdChefCuisinier(Long idChefCuisinier) {
-        this.idChefCuisinier = idChefCuisinier;
-    }
-
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public String getPrenom() {
-        return prenom;
-    }
-
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
-
-    public TypeChef getTypeChef() {
-        return typeChef;
-    }
-
-    public void setTypeChef(TypeChef typeChef) {
         this.typeChef = typeChef;
     }
 

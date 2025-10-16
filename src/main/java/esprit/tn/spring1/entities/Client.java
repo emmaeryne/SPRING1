@@ -136,13 +136,18 @@ public class Client {
 package esprit.tn.spring1.entities;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Date;
 import java.util.List;
 
+@Setter
+@Getter
 @Entity
 public class Client {
 
+    // Getters et Setters
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idClient;
@@ -161,39 +166,6 @@ public class Client {
         this.idClient = idClient;
         this.identifiant = identifiant;
         this.datePremiereVisite = datePremiereVisite;
-    }
-
-    // Getters et Setters
-    public Long getIdClient() {
-        return idClient;
-    }
-
-    public void setIdClient(Long idClient) {
-        this.idClient = idClient;
-    }
-
-    public String getIdentifiant() {
-        return identifiant;
-    }
-
-    public void setIdentifiant(String identifiant) {
-        this.identifiant = identifiant;
-    }
-
-    public Date getDatePremiereVisite() {
-        return datePremiereVisite;
-    }
-
-    public void setDatePremiereVisite(Date datePremiereVisite) {
-        this.datePremiereVisite = datePremiereVisite;
-    }
-
-    public List<Commande> getCommandes() {
-        return commandes;
-    }
-
-    public void setCommandes(List<Commande> commandes) {
-        this.commandes = commandes;
     }
 
     @Override

@@ -201,12 +201,17 @@ public class Commande {
 package esprit.tn.spring1.entities;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
+@Setter
+@Getter
 @Entity
 public class Commande {
 
+    // Getters et Setters
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idCommande;
@@ -234,63 +239,6 @@ public class Commande {
         this.totalRemise = totalRemise;
         this.totalCommande = totalCommande;
         this.note = note;
-    }
-
-    // Getters et Setters
-    public Long getIdCommande() {
-        return idCommande;
-    }
-
-    public void setIdCommande(Long idCommande) {
-        this.idCommande = idCommande;
-    }
-
-    public LocalDate getDateCommande() {
-        return dateCommande;
-    }
-
-    public void setDateCommande(LocalDate dateCommande) {
-        this.dateCommande = dateCommande;
-    }
-
-    public Integer getPourcentageRemise() {
-        return pourcentageRemise;
-    }
-
-    public void setPourcentageRemise(Integer pourcentageRemise) {
-        this.pourcentageRemise = pourcentageRemise;
-    }
-
-    public Float getTotalRemise() {
-        return totalRemise;
-    }
-
-    public void setTotalRemise(Float totalRemise) {
-        this.totalRemise = totalRemise;
-    }
-
-    public Float getTotalCommande() {
-        return totalCommande;
-    }
-
-    public void setTotalCommande(Float totalCommande) {
-        this.totalCommande = totalCommande;
-    }
-
-    public Long getNote() {
-        return note;
-    }
-
-    public void setNote(Long note) {
-        this.note = note;
-    }
-
-    public Client getClient() {
-        return client;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
     }
 
     @Override

@@ -157,12 +157,17 @@ package esprit.tn.spring1.entities;
 
 import esprit.tn.spring1.enums.TypeMenu;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
+@Setter
+@Getter
 @Entity
 public class Menu {
 
+    // Getters et Setters
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idMenu;
@@ -187,55 +192,6 @@ public class Menu {
         this.libelleMenu = libelleMenu;
         this.typeMenu = typeMenu;
         this.prixTotal = prixTotal;
-    }
-
-    // Getters et Setters
-    public Long getIdMenu() {
-        return idMenu;
-    }
-
-    public void setIdMenu(Long idMenu) {
-        this.idMenu = idMenu;
-    }
-
-    public String getLibelleMenu() {
-        return libelleMenu;
-    }
-
-    public void setLibelleMenu(String libelleMenu) {
-        this.libelleMenu = libelleMenu;
-    }
-
-    public TypeMenu getTypeMenu() {
-        return typeMenu;
-    }
-
-    public void setTypeMenu(TypeMenu typeMenu) {
-        this.typeMenu = typeMenu;
-    }
-
-    public Float getPrixTotal() {
-        return prixTotal;
-    }
-
-    public void setPrixTotal(Float prixTotal) {
-        this.prixTotal = prixTotal;
-    }
-
-    public Restaurant getRestaurant() {
-        return restaurant;
-    }
-
-    public void setRestaurant(Restaurant restaurant) {
-        this.restaurant = restaurant;
-    }
-
-    public List<Composant> getComposants() {
-        return composants;
-    }
-
-    public void setComposants(List<Composant> composants) {
-        this.composants = composants;
     }
 
     @Override
