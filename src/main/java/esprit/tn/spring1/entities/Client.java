@@ -142,8 +142,7 @@ import lombok.Setter;
 import java.util.Date;
 import java.util.List;
 
-@Setter
-@Getter
+
 @Entity
 public class Client {
 
@@ -175,6 +174,38 @@ public class Client {
                 ", identifiant='" + identifiant + '\'' +
                 ", datePremiereVisite=" + datePremiereVisite +
                 '}';
+    }
+
+    public void setIdClient(Long idClient) {
+        this.idClient = idClient;
+    }
+
+    public void setIdentifiant(String identifiant) {
+        this.identifiant = identifiant;
+    }
+
+    public void setDatePremiereVisite(Date datePremiereVisite) {
+        this.datePremiereVisite = datePremiereVisite;
+    }
+
+    public void setCommandes(List<Commande> commandes) {
+        this.commandes = commandes;
+    }
+
+    public List<Commande> getCommandes() {
+        return commandes;
+    }
+
+    public Date getDatePremiereVisite() {
+        return datePremiereVisite;
+    }
+
+    public String getIdentifiant() {
+        return identifiant;
+    }
+
+    public Long getIdClient() {
+        return idClient;
     }
 }
 

@@ -2,6 +2,9 @@ package esprit.tn.spring1.services;
 
 import esprit.tn.spring1.entities.Client;
 import esprit.tn.spring1.repositories.ClientRepository;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
