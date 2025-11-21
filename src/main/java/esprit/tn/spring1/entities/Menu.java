@@ -158,22 +158,28 @@ package esprit.tn.spring1.entities;
 import esprit.tn.spring1.enums.TypeMenu;
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.AllArgsConstructor;
 
 import java.util.List;
 
-@Setter
 @Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Menu {
 
-    // Getters et Setters
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idMenu;
 
     private String libelleMenu;
+
+    @Enumerated(EnumType.STRING)
     private TypeMenu typeMenu;
+
     private Float prixTotal;
 
     @ManyToOne
@@ -182,17 +188,6 @@ public class Menu {
 
     @OneToMany(mappedBy = "menu", cascade = CascadeType.ALL)
     private List<Composant> composants;
-
-    // Constructeurs
-    public Menu() {
-    }
-
-    public Menu(Long idMenu, String libelleMenu, TypeMenu typeMenu, Float prixTotal) {
-        this.idMenu = idMenu;
-        this.libelleMenu = libelleMenu;
-        this.typeMenu = typeMenu;
-        this.prixTotal = prixTotal;
-    }
 
     @Override
     public String toString() {
