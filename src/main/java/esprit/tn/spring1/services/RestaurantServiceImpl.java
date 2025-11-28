@@ -1,6 +1,7 @@
 // src/main/java/esprit/tn/spring1/services/RestaurantServiceImpl.java
 package esprit.tn.spring1.services;
 
+import esprit.tn.spring1.entities.ChefCuisinier;
 import esprit.tn.spring1.entities.Menu;
 import esprit.tn.spring1.entities.Restaurant;
 import esprit.tn.spring1.repositories.MenuRepository;
@@ -15,7 +16,7 @@ public class RestaurantServiceImpl implements IRestaurantService {
     private final RestaurantRepository restaurantRepository;
     private final MenuRepository menuRepository;
 
-    // CAS 1 : Création Restaurant + Menus (cascade + initialisation prixTotal)
+
 
 
 
@@ -43,7 +44,26 @@ public class RestaurantServiceImpl implements IRestaurantService {
 
 
 
-    // CAS 2 : Affecter un Menu existant à un Restaurant existant
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @Override
     public void assignMenuToRestaurant(Long menuId, Long restaurantId) {
         Menu menu = menuRepository.findById(menuId).orElseThrow();
@@ -58,7 +78,10 @@ public class RestaurantServiceImpl implements IRestaurantService {
 
 
 
-    
+
+
+
+
 
     // CAS 4 : Ajouter un nouveau Menu et l’affecter à un Restaurant existant
     @Override
