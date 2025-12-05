@@ -20,4 +20,7 @@ public interface MenuService {
     List<Menu> getMenusByType(TypeMenu typeMenu);
 
     List<Menu> searchMenus(String libelle);
+
+    // 🔹 Méthode pour afficher le menu le plus commandé
+    void menuPlusCommande();
 }

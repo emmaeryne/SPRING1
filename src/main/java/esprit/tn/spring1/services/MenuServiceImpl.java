@@ -1,4 +1,4 @@
-package esprit.tn.spring1.services;
+/*package esprit.tn.spring1.services;
 
 import esprit.tn.spring1.entities.Menu;
 import esprit.tn.spring1.enums.TypeMenu;
@@ -57,4 +57,35 @@ public class MenuServiceImpl implements MenuService {
     public List<Menu> searchMenus(String libelle) {
         return menuRepository.findByLibelleMenuContainingIgnoreCase(libelle);
     }
-}
+
+    // 🔹 Méthode pour afficher le menu le plus commandé
+    @Override
+    public void menuPlusCommande() {
+        List<Menu> menus = menuRepository.findAll();
+
+        if (menus.isEmpty()) {
+            System.out.println("Aucun menu n'a été trouvé dans le restaurant.");
+            return;
+        }
+
+        Menu menuLePlusCommande = null;
+        int maxCommandes = 0;
+
+        // Parcourir tous les menus
+        for (Menu menu : menus) {
+            int nbCommandes = (menu.getCommandes() != null) ? menu.getCommandes().size() : 0;
+
+            if (nbCommandes > maxCommandes) {
+                maxCommandes = nbCommandes;
+                menuLePlusCommande = menu;
+            }
+        }
+
+        if (menuLePlusCommande != null) {
+            System.out.println("Le menu le plus commandé dans votre restaurant est " +
+                    menuLePlusCommande.getLibelleMenu() + " commandé " + maxCommandes + " fois");
+        } else {
+            System.out.println("Aucun menu n'a été commandé pour le moment.");
+        }
+    }
+}*/
