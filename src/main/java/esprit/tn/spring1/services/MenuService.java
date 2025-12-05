@@ -22,5 +22,5 @@ public interface MenuService {
     List<Menu> searchMenus(String libelle);
 
     // 🔹 Méthode pour afficher le menu le plus commandé
-    void menuPlusCommande();
+    Menu menuPlusCommande();
 }

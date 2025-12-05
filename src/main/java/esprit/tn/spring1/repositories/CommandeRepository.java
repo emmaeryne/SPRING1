@@ -21,6 +21,9 @@ public interface CommandeRepository extends JpaRepository<Commande, Long> {
     List<Commande> findByDateCommandeBetweenOrderByNoteDesc(LocalDate dateDebut, LocalDate dateFin);
 
     // 4️⃣ Commandes de l'année en cours, triées par note décroissante
-    @Query("SELECT c FROM Commande c WHERE YEAR(c.dateCommande) = YEAR(CURRENT_DATE) ORDER BY c.note DESC")
-    List<Commande> findCurrentYearCommandesOrderByNote();
+   /* @Query("SELECT c FROM Commande c WHERE YEAR(c.dateCommande) = YEAR(CURRENT_DATE) ORDER BY c.note DESC")
+    List<Commande> findCurrentYearCommandesOrderByNote();*/
+    @Query("SELECT c FROM Commande c WHERE c.dateCommande BETWEEN :startOfYear AND :endOfYear ORDER BY c.note DESC")
+    List<Commande> findCurrentYearCommandesOrderByNote(LocalDate startOfYear, LocalDate endOfYear);
+
 }

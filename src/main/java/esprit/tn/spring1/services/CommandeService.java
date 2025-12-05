@@ -30,8 +30,29 @@ public class CommandeService {
     }
 
     // Commandes de l'année en cours, triées par note décroissante
-    public void findCurrentYearCommandesOrderByNote() {
-        List<Commande> commandes = commandeRepository.findCurrentYearCommandesOrderByNote();
+
+    public List<Commande> findCurrentYearCommandesOrderByNote() {
+        LocalDate startOfYear = LocalDate.of(LocalDate.now().getYear(), 1, 1);
+        LocalDate endOfYear = LocalDate.of(LocalDate.now().getYear(), 12, 31);
+
+        List<Commande> commandes = commandeRepository.findCurrentYearCommandesOrderByNote(startOfYear, endOfYear);
+
+        commandes.forEach(c -> {
+            String clientIdentifiant = (c.getClient() != null) ? c.getClient().getIdentifiant() : "Inconnu";
+            System.out.println(c.getIdCommande() + " | " + clientIdentifiant + " | " + c.getNote());
+        });
+
+        return commandes;
+    }
+
+
+
+
+  /*  public void findCurrentYearCommandesOrderByNote() {
+        LocalDate startOfYear = LocalDate.of(LocalDate.now().getYear(), 1, 1);
+        LocalDate endOfYear = LocalDate.of(LocalDate.now().getYear(), 12, 31);
+
+        List<Commande> commandes = commandeRepository.findCurrentYearCommandesOrderByNote(startOfYear, endOfYear);
 
         System.out.println("----- Commandes de l'année en cours (triées par note) -----");
 
@@ -41,7 +62,6 @@ public class CommandeService {
         }
 
         commandes.forEach(c -> {
-            // On utilise identifiant à la place de nom
             String clientIdentifiant = (c.getClient() != null) ? c.getClient().getIdentifiant() : "Inconnu";
             System.out.println(
                     c.getIdCommande() + " | " +
@@ -49,5 +69,6 @@ public class CommandeService {
                             c.getNote()
             );
         });
-    }
+    }*/
+
 }
