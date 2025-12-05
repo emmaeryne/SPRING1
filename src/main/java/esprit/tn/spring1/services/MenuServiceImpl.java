@@ -91,6 +91,7 @@ public class MenuServiceImpl implements MenuService {
 }*/
 
 package esprit.tn.spring1.services;
+import org.springframework.transaction.annotation.Transactional;
 
 import esprit.tn.spring1.entities.Menu;
 import esprit.tn.spring1.enums.TypeMenu;
@@ -150,7 +151,7 @@ public class MenuServiceImpl implements MenuService {
         return menuRepository.findByLibelleMenuContainingIgnoreCase(libelle);
     }
 
-    @Override
+    /*@Override
     public void menuPlusCommande() {
         List<Menu> menus = menuRepository.findAll();
 
@@ -180,6 +181,42 @@ public class MenuServiceImpl implements MenuService {
         } else {
             System.out.println("Aucun menu n'a été commandé pour le moment.");
         }
+    }*/
+
+
+
+
+
+    @Override
+    @Transactional
+    public void menuPlusCommande() {
+        List<Menu> menus = menuRepository.findAll();
+
+        if (menus.isEmpty()) {
+            System.out.println("Aucun menu n'a été trouvé dans le restaurant.");
+            return;
+        }
+
+        Menu menuLePlusCommande = null;
+        int maxCommandes = 0;
+
+        for (Menu menu : menus) {
+            int nbCommandes = (menu.getCommandes() != null) ? menu.getCommandes().size() : 0;
+
+            if (nbCommandes > maxCommandes) {
+                maxCommandes = nbCommandes;
+                menuLePlusCommande = menu;
+            }
+        }
+
+        if (menuLePlusCommande != null) {
+            System.out.println("Le menu le plus commandé est : " +
+                    menuLePlusCommande.getLibelleMenu() +
+                    " (" + maxCommandes + " commandes)");
+        } else {
+            System.out.println("Aucun menu n'a été commandé pour le moment.");
+        }
     }
+
 }
 
