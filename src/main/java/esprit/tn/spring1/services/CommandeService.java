@@ -45,6 +45,17 @@ public class CommandeService {
         return commandes;
     }
 
+    // Méthode pour récupérer toutes les commandes
+    public List<Commande> getAllCommandes() {
+        System.out.println("Récupération de toutes les commandes...");
+        return commandeRepository.findAll(); // Retourne la liste réelle des commandes
+    }
+
+    // Méthode de test qui lève une exception
+    public void testException() {
+        System.out.println("Méthode qui va lancer une exception !");
+        throw new RuntimeException("Exception volontaire pour tester l'aspect");
+    }
 
 
 
