@@ -12,6 +12,7 @@ import java.util.List;
 @RequestMapping("/menu")
 public class MenuController {
 
+    @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     @Autowired
     private MenuService menuService;
 
